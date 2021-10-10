@@ -1,10 +1,14 @@
 = Kafka deployment
 
-this script do next:
-<1> Download *helm* if it's not present on yiur MacBook
-<2> Install helm chart https://github.com/confluentinc/cp-helm-charts on your k8s.
+.this script do next:
+<1> Download `helm` if it's not present on your MacBook
+<2> Create k&s Namespace for kafka (default name is `kafka`)
+<3> Deploy helm chart https://github.com/confluentinc/cp-helm-charts on your k8s.
 
-Will be deployed ONLY main kafka-components: zookeeper, kafka, schema_registry
+Will be deployed ONLY main kafka-components:
+* zookeeper
+* kafka
+* schema_registry
 
 = Usaga example:
 ----
