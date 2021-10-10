@@ -10,7 +10,7 @@ Will be deployed ONLY main kafka-components:
 * kafka
 * schema_registry
 
-= Usaga example:
+= Example:
 ----
 git clone git@github.com:dvagapov/scripts-for-k8s-deployment.git
 cd scripts-for-k8s-deployment
