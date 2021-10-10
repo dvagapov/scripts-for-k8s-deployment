@@ -1,1 +1,0 @@
-# scripts-for-k8s-deployment
