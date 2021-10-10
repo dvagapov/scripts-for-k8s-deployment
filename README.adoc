@@ -1,0 +1,27 @@
+= Kafka deployment
+
+this script do next:
+<1> Download *helm* if it's not present on yiur MacBook
+<2> Install helm chart https://github.com/confluentinc/cp-helm-charts on your k8s.
+
+Will be deployed ONLY main kafka-components: zookeeper, kafka, schema_registry
+
+= Usaga example:
+----
+git clone git@github.com:dvagapov/scripts-for-k8s-deployment.git
+cd scripts-for-k8s-deployment
+chmod +x ./CP-Kafka-deployment.sh
+
+export NAMESPACE=kafka-test
+# ./CP-Kafka-deployment.sh \
+#   NAMESPACE #(default=kafka) \
+#   REPLICA_COUNT #(default=3) \
+#   IMAGE_TAG #(default=6.1.0) 
+./CP-Kafka-deployment.sh $NAMESPACE 1
+
+kubectl get pods -n $NAMESPACE -w
+
+# for uninstall
+# helm uninstall kafka -n $NAMESPACE
+# kubectl delete ns $NAMESPACE --force --grace-period=0
+----
